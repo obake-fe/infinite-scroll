@@ -57,14 +57,13 @@ function App() {
           {({ height, isScrolling, onChildScroll, scrollTop }) => (
               <List
                   width={300}
-                  height={height}
-                  autoHeight
-                  isScrolling={isScrolling}
-                  onScroll={onChildScroll}
-                  rowCount={list.length}
-                  rowHeight={100}
-                  rowRenderer={rowRenderer}
-                  scrollTop={scrollTop}
+                  height={height}  // ビューポートのheightを設定している
+                  autoHeight  // WindowScrollerのときは必須感
+                  isScrolling={isScrolling}  // WindowScroller用 スクロール検知
+                  rowCount={list.length}  // 列の数
+                  rowHeight={100}  // 列の高さ(px)
+                  rowRenderer={rowRenderer} // リストのDOM
+                  scrollTop={scrollTop}  // スクロール用オフセット値
               />
           )}
       </WindowScroller>
