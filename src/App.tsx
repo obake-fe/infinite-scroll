@@ -8,52 +8,21 @@ import {
 } from "@material-ui/core";
 
 // List data as an array of strings
-const list = [
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn5",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn10",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn15",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn20",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn25",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn",
-  "Brian Vaughn30"
-];
+const list = Array.from({ length: 100 }, (v, i) => i);
 
 const useStyles = makeStyles(() =>
   createStyles({
     card: {
       textAlign: "center",
       backgroundColor: "#aaa",
-      height: 170,
-      fontSize: 20
+      height: 170
     },
     cardArea: {
       marginTop: 10
     },
     cardButton: {
-      height: "100%"
+      height: "100%",
+      fontSize: 32
     }
   })
 );
